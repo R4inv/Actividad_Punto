@@ -12,7 +12,7 @@ def agregar_libro():
     autor = input("ingrese autor: ")
     libroplus = {"titulo": titulo, "autor": autor, "estado": "disponible" }
     if libroplus in libros:
-        print("no se permiten libros repetidos")
+        print("!No se permiten libros repetidos")
     else:
         libros.append(libroplus)
         print(f"libro: {titulo} agregado")
@@ -34,7 +34,7 @@ def buscar_libro():
             print(libro)
             break
     if not encontrado:
-        print ("libro no disponible")
+        print ("!Libro no disponible")
 
 
 def prestar_libro ():
@@ -50,7 +50,7 @@ def prestar_libro ():
                 print(f"libro: {libro["titulo"]} prestado con exito")
             break
     if not encontrado:
-        print(f"el libro {prestar} no esta en el sistema")
+        print(f"!El libro {prestar} no esta en el sistema")
 
 
 def devolver_libro ():
@@ -66,7 +66,7 @@ def devolver_libro ():
                 print("libro devuelto exitosamente")
             break
     if not encontrado:
-        print(f"el libro {devolver} que desea devolver no esta en el sistema")
+        print(f"!El libro {devolver} que desea devolver no esta en el sistema")
 
 
 def eliminar_libro ():
@@ -81,7 +81,7 @@ def eliminar_libro ():
             print(f"el libro: {libro["titulo"]} a sido eliminado del sistema")
             break
     if not encontrado:
-        print("el libro que desea eliminar no esta en el sistema")
+        print("!El libro que desea eliminar no esta en el sistema")
 
 
 def modificar_libro():
@@ -97,7 +97,7 @@ def modificar_libro():
             print("libro modificado con exito")
         break
     if not encontrado:
-        print("el libro que desea modificar no existe")
+        print("!El libro que desea modificar no existe")
 
 
 def mostrar_estadisticas():
